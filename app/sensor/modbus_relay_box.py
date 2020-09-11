@@ -72,7 +72,7 @@ class ModbusRelayBox:
 
         try:
             # read registers. Start at 0 for convenience
-            rr = self.client.read_holding_registers(0, 80, unit=self.unit_id)
+            rr = self.client.read_holding_registers(0, 18, unit=self.unit_id)
         except Exception as e:
             self.logger.error('Charge Controller: ModbusIOException' + str(e))
             return []
